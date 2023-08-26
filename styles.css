@@ -1,0 +1,115 @@
+html {
+    height: 100%;
+}
+
+body {
+    margin: 5%;
+    background-color: antiquewhite;
+}
+
+h1 {
+    text-align: center;
+}
+
+.content {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 0.25em;
+    box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.25);
+    box-sizing: border-box;
+    left: 50%;
+    padding: 10vmin;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+h1,
+p {
+    font-family: HelveticaNeue-Thin, Helvetica, Arial;
+    font-weight: bold;
+}
+
+.card-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.card-container {
+    width: 500px;
+    height: 350px;
+}
+
+.card-container:hover>.flip-card {
+    cursor: pointer;
+    transform: rotateY(180deg);
+}
+
+.flip-card {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    transition: transform 1000ms;
+    transform-style: preserve-3d;
+}
+
+.front,
+.back {
+    height: 100%;
+    width: 100%;
+    border-radius: 2rem;
+    box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
+    position: absolute;
+    backface-visibility: hidden;
+    padding: 20px;
+}
+
+.front {
+    background-size: cover;
+    background-position: center;
+}
+
+.back {
+    background-color: #222831;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-weight: lighter;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.primary {
+    text-decoration-line: line-through;
+    text-decoration-style: double;
+    font-size: 30px;
+}
+
+.onSale {
+    color: cornflowerblue;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+#red {
+    background-image: url(images/red.jpg);
+}
+
+#brown {
+    background-image: url(images/brown.jpg);
+}
+
+#pastel {
+    background-image: url(images/pastel.jpg);
+}
